@@ -75,6 +75,6 @@ mapboxgl.accessToken =
         }
         // add the data source
         const source =
-            '<p style="text-align: right; font-size:10pt">Source: <a href="https://earthquake.usgs.gov/earthquakes/">USGS</a></p>';
+            '<p style="text-align: right; font-size:10pt">Source: <a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">The New York Times</a></p>';
         // combine all the html codes.
         legend.innerHTML = labels.join('') + source;
