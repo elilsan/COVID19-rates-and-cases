@@ -1,76 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>COVID19 Counts in the United States</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* the layout of the legend panel */
-        #legend {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 110px;
-            background: #fff;
-            margin-right: 20px;
-            margin-bottom: 40px;
-            padding: 10px 20px 10px 10px;
-            border-radius: 3px;
-            text-align: center;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        /* each line for a break */
-        .break {
-            position: relative;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        /* basic style for a dot/circle */
-        .dot {
-            display: inline-block;
-            margin-top: 5px;
-            border-radius: 50%;
-            opacity: 0.6;
-        }
-
-        /* the label for the dot */
-        .dot-label {
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-style: italic;
-        }
-
-        /* the text color of a hyper link */
-        a {
-            color: black
-        }
-    </style>
-</head>
-
-<body>
-    <div id="map"></div>
-    <div id="legend"></div>
-    <script>
-        mapboxgl.accessToken =
+mapboxgl.accessToken =
             'pk.eyJ1IjoiZWxpbHNhbiIsImEiOiJjbHNheDVoejMwOGI3MmpudHlka2F3b2VsIn0.n64SDOIlbQ9Jx9LiGtVzkg';
         let map = new mapboxgl.Map({
             container: 'map', // container ID
@@ -150,8 +78,3 @@
             '<p style="text-align: right; font-size:10pt">Source: <a href="https://earthquake.usgs.gov/earthquakes/">USGS</a></p>';
         // combine all the html codes.
         legend.innerHTML = labels.join('') + source;
-    </script>
-
-</body>
-
-</html>
